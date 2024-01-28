@@ -44,6 +44,9 @@ struct ContentView: View {
                             Image(systemName: "\(word.count).circle")
                             Text(word)
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel(word)
+                        .accessibilityHint("\(word.count) letters") 
                     }
                 }
             }
@@ -198,9 +201,6 @@ struct ContentView: View {
         return misspelledRange.location == NSNotFound
     }
     
-    //    func showError() {
-    //
-    //    }
 }
 
 
